@@ -1,95 +1,29 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Exoplayer for A/B Testing by u-next</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta charset="UTF-8">
+    <title>ExoPlayer for A/B Testing by u-next</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Exoplayer for A/B Testing</h1>
-        <p>A media player for A/B testing based on Google&#39;s ExoPlayer</p>
+    <section class="page-header">
+      <h1 class="project-name">ExoPlayer for A/B Testing</h1>
+      <h2 class="project-tagline">A media player for A/B testing based on Google&#39;s ExoPlayer</h2>
+      <a href="https://github.com/u-next/ExoPlayer-AB" class="btn">View on GitHub</a>
+      <a href="https://github.com/u-next/ExoPlayer-AB/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/u-next/ExoPlayer-AB/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-        <p class="view"><a href="https://github.com/u-next/ExoPlayer-AB">View the Project on GitHub <small>u-next/ExoPlayer-AB</small></a></p>
+    <section class="main-content">
+      <h1>
+<a id="what-is-this-project" class="anchor" href="#what-is-this-project" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is this project</h1>
 
-
-        <ul>
-          <li><a href="https://github.com/u-next/ExoPlayer-AB/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/u-next/ExoPlayer-AB/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/u-next/ExoPlayer-AB">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>
-<a id="exoplayer" class="anchor" href="#exoplayer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ExoPlayer</h1>
-
-<p>ExoPlayer is an application level media player for Android. It provides an
-alternative to Android’s MediaPlayer API for playing audio and video both
-locally and over the Internet. ExoPlayer supports features not currently
-supported by Android’s MediaPlayer API, including DASH and SmoothStreaming
-adaptive playbacks. Unlike the MediaPlayer API, ExoPlayer is easy to customize
-and extend, and can be updated through Play Store application updates.</p>
-
-<h2>
-<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation</h2>
-
-<ul>
-<li>The <a href="https://google.github.io/ExoPlayer/guide.html">developer guide</a> provides a wealth of information to help you get
-started.</li>
-<li>The <a href="https://google.github.io/ExoPlayer/doc/reference">class reference</a> documents the ExoPlayer library classes.</li>
-<li>The <a href="https://github.com/google/ExoPlayer/blob/dev/RELEASENOTES.md">release notes</a> document the major changes in each release.</li>
-</ul>
-
-<h2>
-<a id="using-exoplayer" class="anchor" href="#using-exoplayer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using ExoPlayer</h2>
-
-<h4>
-<a id="via-jcenter" class="anchor" href="#via-jcenter" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Via jCenter</h4>
-
-<p>The easiest way to get started using ExoPlayer is by including the following in
-your project's <code>build.gradle</code> file:</p>
-
-<div class="highlight highlight-source-groovy-gradle"><pre>compile <span class="pl-s"><span class="pl-pds">'</span>com.google.android.exoplayer:exoplayer:rX.X.X<span class="pl-pds">'</span></span></pre></div>
-
-<p>where <code>rX.X.X</code> is the your preferred version. For the latest version, see the
-project's <a href="https://github.com/google/ExoPlayer/releases">Releases</a>. For more details, see the project on <a href="https://bintray.com/google/exoplayer/exoplayer/view">Bintray</a>.</p>
-
-<h4>
-<a id="as-source" class="anchor" href="#as-source" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>As source</h4>
-
-<p>ExoPlayer can also be built from source using Gradle. You can include it as a
-dependent project like so:</p>
-
-<div class="highlight highlight-source-groovy-gradle"><pre><span class="pl-c">// settings.gradle</span>
-include <span class="pl-s"><span class="pl-pds">'</span>:app<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>:..:ExoPlayer:library<span class="pl-pds">'</span></span>
-
-<span class="pl-c">// app/build.gradle</span>
-<span class="pl-en">dependencies</span> {
-    compile project(<span class="pl-s"><span class="pl-pds">'</span>:..:ExoPlayer:library<span class="pl-pds">'</span></span>)
-}</pre></div>
-
-<h4>
-<a id="as-a-jar" class="anchor" href="#as-a-jar" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>As a jar</h4>
-
-<p>If you want to use ExoPlayer as a jar, run:</p>
-
-<div class="highlight highlight-source-shell"><pre>./gradlew jarRelease</pre></div>
-
-<p>and copy <code>library.jar</code> to the libs folder of your new project.</p>
-
-<h2>
-<a id="developing-exoplayer" class="anchor" href="#developing-exoplayer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Developing ExoPlayer</h2>
-
-<h4>
-<a id="project-branches" class="anchor" href="#project-branches" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project branches</h4>
+<p>This is a public fork of Google's ExoPlayer.
+In this project, we modify the demo and ExoPlayer itself to support following use cases </p>
 
 <ul>
 <li>The project has <code>dev-vX</code> and <code>release-vX</code> branches, where <code>X</code> is the major
@@ -103,18 +37,30 @@ same (or an equivalent) fix should also be submitted to all subsequent
 <code>X</code>.</li>
 </ul>
 
-<h4>
-<a id="using-android-studio" class="anchor" href="#using-android-studio" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using Android Studio</h4>
+<h1>
+<a id="exoplayer" class="anchor" href="#exoplayer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ExoPlayer</h1>
 
-<p>To develop ExoPlayer using Android Studio, simply open the ExoPlayer project in
-the root directory of the repository.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/u-next">u-next</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+<p>ExoPlayer is an application level media player made by Google.
+Please refer to the original README.MD of ExoPlayer for more detail.</p>
+
+<h1>
+<a id="project-branches" class="anchor" href="#project-branches" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project branches</h1>
+
+<ul>
+<li>
+<code>ab-dev-vX</code> is the development branch of this project, where <code>X</code> is the major
+version number of ExoPlayer.</li>
+<li>Pull requests should normally be made to this branch.</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/u-next/ExoPlayer-AB">ExoPlayer for A/B Testing</a> is maintained by <a href="https://github.com/u-next">u-next</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+
+    </section>
+
+  
   </body>
 </html>
