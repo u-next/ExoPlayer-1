@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Exoplayer for A/B Testing by u-next</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Exoplayer for A/B Testing</h1>
+        <p>A media player for A/B testing based on Google&#39;s ExoPlayer</p>
+
+        <p class="view"><a href="https://github.com/u-next/ExoPlayer-AB">View the Project on GitHub <small>u-next/ExoPlayer-AB</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/u-next/ExoPlayer-AB/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/u-next/ExoPlayer-AB/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/u-next/ExoPlayer-AB">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="exoplayer" class="anchor" href="#exoplayer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ExoPlayer</h1>
+
+<p>ExoPlayer is an application level media player for Android. It provides an
+alternative to Android’s MediaPlayer API for playing audio and video both
+locally and over the Internet. ExoPlayer supports features not currently
+supported by Android’s MediaPlayer API, including DASH and SmoothStreaming
+adaptive playbacks. Unlike the MediaPlayer API, ExoPlayer is easy to customize
+and extend, and can be updated through Play Store application updates.</p>
+
+<h2>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation</h2>
+
+<ul>
+<li>The <a href="https://google.github.io/ExoPlayer/guide.html">developer guide</a> provides a wealth of information to help you get
+started.</li>
+<li>The <a href="https://google.github.io/ExoPlayer/doc/reference">class reference</a> documents the ExoPlayer library classes.</li>
+<li>The <a href="https://github.com/google/ExoPlayer/blob/dev/RELEASENOTES.md">release notes</a> document the major changes in each release.</li>
+</ul>
+
+<h2>
+<a id="using-exoplayer" class="anchor" href="#using-exoplayer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using ExoPlayer</h2>
+
+<h4>
+<a id="via-jcenter" class="anchor" href="#via-jcenter" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Via jCenter</h4>
+
+<p>The easiest way to get started using ExoPlayer is by including the following in
+your project's <code>build.gradle</code> file:</p>
+
+<div class="highlight highlight-source-groovy-gradle"><pre>compile <span class="pl-s"><span class="pl-pds">'</span>com.google.android.exoplayer:exoplayer:rX.X.X<span class="pl-pds">'</span></span></pre></div>
+
+<p>where <code>rX.X.X</code> is the your preferred version. For the latest version, see the
+project's <a href="https://github.com/google/ExoPlayer/releases">Releases</a>. For more details, see the project on <a href="https://bintray.com/google/exoplayer/exoplayer/view">Bintray</a>.</p>
+
+<h4>
+<a id="as-source" class="anchor" href="#as-source" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>As source</h4>
+
+<p>ExoPlayer can also be built from source using Gradle. You can include it as a
+dependent project like so:</p>
+
+<div class="highlight highlight-source-groovy-gradle"><pre><span class="pl-c">// settings.gradle</span>
+include <span class="pl-s"><span class="pl-pds">'</span>:app<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>:..:ExoPlayer:library<span class="pl-pds">'</span></span>
+
+<span class="pl-c">// app/build.gradle</span>
+<span class="pl-en">dependencies</span> {
+    compile project(<span class="pl-s"><span class="pl-pds">'</span>:..:ExoPlayer:library<span class="pl-pds">'</span></span>)
+}</pre></div>
+
+<h4>
+<a id="as-a-jar" class="anchor" href="#as-a-jar" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>As a jar</h4>
+
+<p>If you want to use ExoPlayer as a jar, run:</p>
+
+<div class="highlight highlight-source-shell"><pre>./gradlew jarRelease</pre></div>
+
+<p>and copy <code>library.jar</code> to the libs folder of your new project.</p>
+
+<h2>
+<a id="developing-exoplayer" class="anchor" href="#developing-exoplayer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Developing ExoPlayer</h2>
+
+<h4>
+<a id="project-branches" class="anchor" href="#project-branches" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project branches</h4>
+
+<ul>
+<li>The project has <code>dev-vX</code> and <code>release-vX</code> branches, where <code>X</code> is the major
+version number.</li>
+<li>Most development work happens on the <code>dev-vX</code> branch with the highest major
+version number. Pull requests should normally be made to this branch.</li>
+<li>Bug fixes may be submitted to older <code>dev-vX</code> branches. When doing this, the
+same (or an equivalent) fix should also be submitted to all subsequent
+<code>dev-vX</code> branches.</li>
+<li>A <code>release-vX</code> branch holds the most recent stable release for major version
+<code>X</code>.</li>
+</ul>
+
+<h4>
+<a id="using-android-studio" class="anchor" href="#using-android-studio" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using Android Studio</h4>
+
+<p>To develop ExoPlayer using Android Studio, simply open the ExoPlayer project in
+the root directory of the repository.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/u-next">u-next</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
